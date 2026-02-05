@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: fsd-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        fromConfigVar: mongouri
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRY
+        value: 24h
+      - key: FRONTEND_URL
+        value: https://fsd---frontend.onrender.com # Placeholder, will need to be updated with your actual frontend URL
