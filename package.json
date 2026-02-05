@@ -20,8 +20,12 @@
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.1.6"
   },
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
-    "globals": "^17.3.0"
+    "globals": "^17.3.0",
+    "nodemon": "^3.1.9"
   }
 }
